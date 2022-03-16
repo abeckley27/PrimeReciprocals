@@ -38,12 +38,12 @@ def divide(a, b, wtf = False):
         p += 1
     
     repeatlength = 0
-    goesintolist = []
+    goesintolist = dict([])
     sequence = []
     
     while (a not in goesintolist):
         div = a // b
-        goesintolist.append(a)
+        goesintolist[a] = True
         sequence.append(div)
         
         q += (div * np.power(10.0, -1 * p))
